@@ -10,12 +10,14 @@ public class BaseStep {
     protected MainPage mainPage;
     protected PersonalPage personalPage;
     protected PromotionPage promotionPage;
+    protected LoginPage loginPage;
 
     public void initPages(AndroidDriver<MobileElement> driver) {
         accountPage = new AccountPage(driver);
         mainPage = new MainPage(driver);
         personalPage = new PersonalPage(driver);
         promotionPage = new PromotionPage(driver);
+        loginPage = new LoginPage(driver);
     }
 
 
