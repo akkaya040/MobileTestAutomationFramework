@@ -7,4 +7,24 @@ public class PromotionPage extends BasePage{
     public PromotionPage(AndroidDriver<MobileElement> driver) {
         super(driver);
     }
+
+    //Mobile Objects
+
+
+    //Page Methods
+
+    public void clickCloseButton() {
+    }
+
+    public void clickLoadButton() {
+    }
+
+    public String getCaptchaHashCode() {
+    }
+
+    public void fillCaptchaCode(String captchaCode) {
+    }
+
+    public void fillRandomPromotionCode() {
+    }
 }
