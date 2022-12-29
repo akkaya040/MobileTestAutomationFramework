@@ -14,6 +14,7 @@ public class MainPage extends BasePage {
     private final By btnLoginMain = By.id("com.pordiva.nesine.android:id/btn_login");
     private final By txtUserId = By.id("com.pordiva.nesine.android:id/memberidValue");
     private final By btnAccount = By.id("com.pordiva.nesine.android:id/member_image");
+    private final By imgNesine = By.id("com.pordiva.nesine.android:id/img_logo");
 
 
 
@@ -31,7 +32,7 @@ public class MainPage extends BasePage {
 
     public void confirmMainPage() {
 
-        controlIsElementExist(btnAccount);
+        controlIsElementExist(imgNesine);
 
     }
 

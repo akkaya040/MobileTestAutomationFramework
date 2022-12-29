@@ -20,8 +20,8 @@ Feature: Nesine Account Scenarios
     Then The User Should Arrive "Promotions" Page
     And The User Fills Random Promotion Code
     And The User Fills Captcha Code
-    When The User Clicks Load Button
-    Then The User Should See Code Error Message
+#    When The User Clicks Load Button
+#    Then The User Should See Code Error Message
     And The User Clicks Close Button In Promotions Page
     Then The User Should Arrive "Account" Page
 

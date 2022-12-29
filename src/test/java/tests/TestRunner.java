@@ -1,3 +1,5 @@
+package tests;
+
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.FeatureWrapper;
 import io.cucumber.testng.PickleWrapper;
@@ -15,7 +17,7 @@ import tests.BaseTest;
         publish = false,
         dryRun = false,
         //    tags = "@NesineAutomation",
-        tags= "@LoginScenarios"
+        tags= "@AddingRandomPromotionCode"
 )
 public class TestRunner extends BaseTest {
     private TestNGCucumberRunner cucumberRunner;

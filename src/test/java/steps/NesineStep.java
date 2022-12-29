@@ -50,7 +50,7 @@ public class NesineStep extends BaseStep{
                 mainPage.confirmMainPage();
                 break;
             case "Promotions":
-                loginPage.confirmPromotionsPage();
+                promotionPage.confirmPromotionsPage();
                 break;
         }
 
@@ -150,9 +150,14 @@ public class NesineStep extends BaseStep{
     @Then("The User Should See Error Message Popup")
     public void theUserShouldSeeErrorMessagePopup() {
 
+        loginPage.controlLoginErrorMessage();
+
     }
 
     @When("The User Confirms Error Message Popup")
     public void theUserConfirmsErrorMessagePopup() {
+
+        loginPage.closeLoginErrorMessage();
+
     }
 }
