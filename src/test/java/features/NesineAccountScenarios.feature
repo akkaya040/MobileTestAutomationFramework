@@ -26,7 +26,7 @@ Feature: Nesine Account Scenarios
     Then The User Should Arrive "Account" Page
 
   @ControlAccountInformations
-  Scenario: Control Account Informations
+  Scenario: Control Account Information
     And The User Stores UserId In Main Page
     When The User Clicks "Account" Button In Main Page
     Then The User Should Arrive "Account" Page
