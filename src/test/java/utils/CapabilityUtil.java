@@ -29,19 +29,21 @@ public class CapabilityUtil {
         desiredCapabilities.setCapability("appPackage", prop.getProperty("appPackage"));
         desiredCapabilities.setCapability("appActivity", prop.getProperty("appActivity"));
         desiredCapabilities.setCapability("automationName", prop.getProperty("automationName"));
-//        desiredCapabilities.setCapability("noReset","true");
 
         return desiredCapabilities;
     }
 
 
-    public DesiredCapabilities getDesiredCapabilities(String udid, String platformVersion) {
+    public DesiredCapabilities getDesiredCapabilities(String deviceName,String udid,String platformName, String platformVersion, String appPackage,String appActivity,String automationName) {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+
+        desiredCapabilities.setCapability("deviceName", deviceName);
         desiredCapabilities.setCapability("udid", udid);
         desiredCapabilities.setCapability("platformVersion", platformVersion);
-        desiredCapabilities.setCapability("platformName", "Android");
-        desiredCapabilities.setCapability("appPackage", "com.pordiva.nesine.android");
-        desiredCapabilities.setCapability("appActivity", "com.nesine.ui.taboutside.splash.SplashActivity");
+        desiredCapabilities.setCapability("platformName", platformName);
+        desiredCapabilities.setCapability("appPackage", appPackage);
+        desiredCapabilities.setCapability("appActivity", appActivity);
+        desiredCapabilities.setCapability("automationName", automationName);
         desiredCapabilities.setCapability("skipUnlock", "true");
         desiredCapabilities.setCapability("noReset", "false");
         return desiredCapabilities;
