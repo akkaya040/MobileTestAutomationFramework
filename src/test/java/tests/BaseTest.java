@@ -13,29 +13,19 @@ import java.io.IOException;
 import java.net.URL;
 
 public class BaseTest {
-    private final CapabilityUtil desiredCapabilitiesUtil = new CapabilityUtil();
+    private final CapabilityUtil capabilityUtil = new CapabilityUtil();
 
     @BeforeMethod
     @Parameters({ "deviceName","udid", "platformName","platformVersion","appPackage","appActivity","automationName" })
     public void setup(String deviceName,String udid,String platformName, String platformVersion, String appPackage,String appActivity,String automationName) throws IOException {
 
-        DesiredCapabilities caps = desiredCapabilitiesUtil.getDesiredCapabilities(deviceName,udid,platformName, platformVersion,appPackage,appActivity,automationName);
+        DesiredCapabilities caps = capabilityUtil.getDesiredCapabilities(deviceName,udid,platformName, platformVersion,appPackage,appActivity,automationName);
         DriverManager.setDriver(new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), caps));
 
     }
 
     @AfterMethod
     public synchronized void teardown() {
-//        try {
-//            String screenshotName = scenario.getName().replaceAll("", "_");
-//            if (scenario.isFailed()) {
-//                TakesScreenshot ts = (TakesScreenshot) ThreadLocalDriver.getDriver();
-//                byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
-//                scenario.attach(screenshot, "img/png", screenshotName);
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
 
         DriverManager.killDriver();
 

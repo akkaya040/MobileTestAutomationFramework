@@ -14,7 +14,7 @@ import tests.BaseTest;
         monochrome = true,
         features = "src/test/java/features",
         glue = "steps",
-        publish = false,
+        publish = true,
         dryRun = false,
         tags = "@NesineAutomation"
         //tags= "@AddingRandomPromotionCode"
