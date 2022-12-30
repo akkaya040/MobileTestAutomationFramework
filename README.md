@@ -115,9 +115,9 @@ mvn clean test //direclty run test succesfully
 
 //If you want to pass parameter from cmd,
 //Properties should be defined in pom.xml
-//Then we can call from test runnig
-        mvn clean test -Dapp.username=akkaya040 -Dapp.password=*******
+//Then we can call from test running
 
+mvn clean test -Dapp.username=akkaya040 -Dapp.password=*******
 
 
 ```
