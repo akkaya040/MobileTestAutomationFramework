@@ -1,0 +1,14 @@
+pages/PromotionPage.class
+pages/BasePage.class
+utils/CustomLogger.class
+tests/BaseTest.class
+utils/CapabilityUtil.class
+pages/AccountPage.class
+pages/MainPage.class
+utils/AutomationProperties.class
+steps/NesineStep.class
+steps/BaseStep.class
+pages/PersonalPage.class
+utils/DriverManager.class
+pages/LoginPage.class
+tests/TestRunner.class
