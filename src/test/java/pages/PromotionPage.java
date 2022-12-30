@@ -12,12 +12,12 @@ public class PromotionPage extends BasePage {
     }
 
     //Mobile Objects
-    private final By txtFieldsInPromotion = By.className("android.widget.EditText");
-    private final By txtCaptchaCode = By.id("securityCode");
-    private final By imgCaptcha = By.xpath("//android.widget.Image");
+    private final By txtFieldsInPromotion = By.className("//android.widget.EditText");
+    private final By txtPromotionCode = By.xpath("//android.widget.EditText[@resource-id='code']");
+    private final By txtCaptchaCode = By.xpath("//android.widget.EditText[@resource-id='securityCode']");
+    private final By imgCaptcha = By.xpath("//android.widget.Image[@resource-id='CaptchaImage']");
     private final By btnSave = By.xpath("//android.widget.Button[contains(@text,'Yükle')]");
     private final By btnClose = By.id("com.pordiva.nesine.android:id/back");
-
 
     //Page Methods
 
@@ -39,16 +39,17 @@ public class PromotionPage extends BasePage {
 
     public void fillCaptchaCode(String captchaCode) {
 
-        MobileElement meCaptchaCode = (MobileElement) waitAndFindElements(txtFieldsInPromotion).get(1);
-        sendText(meCaptchaCode, captchaCode);
+//        MobileElement meCaptchaCode = (MobileElement) waitAndFindElements(txtFieldsInPromotion).get(1);
+//        sendText(meCaptchaCode, captchaCode);
+        sendText(txtCaptchaCode, captchaCode);
 
     }
 
     public void fillRandomPromotionCode() {
 
-        MobileElement mePromoCode = (MobileElement) waitAndFindElements(txtFieldsInPromotion).get(0);
-        sendText(mePromoCode, generateRandomString(10));
-
+//        MobileElement mePromoCode = (MobileElement) waitAndFindElements(txtFieldsInPromotion).get(0);
+//        sendText(mePromoCode, generateRandomString(10));
+        sendText(txtPromotionCode, generateRandomString(10));
     }
 
     public void confirmPromotionsPage() {

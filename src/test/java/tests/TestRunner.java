@@ -17,7 +17,7 @@ import tests.BaseTest;
         publish = false,
         dryRun = false,
         //    tags = "@NesineAutomation",
-        tags= "@AddingRandomPromotionCode"
+        tags= "@ControlAccountInformations"
 )
 public class TestRunner extends BaseTest {
     private TestNGCucumberRunner cucumberRunner;

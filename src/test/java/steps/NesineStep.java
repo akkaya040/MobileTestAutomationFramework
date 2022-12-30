@@ -9,7 +9,7 @@ import utils.ThreadLocalDriver;
 
 public class NesineStep extends BaseStep{
 
-    String userId;
+    public String userId;
     @Before
     public void setupPages() {
 
@@ -51,6 +51,9 @@ public class NesineStep extends BaseStep{
                 break;
             case "Promotions":
                 promotionPage.confirmPromotionsPage();
+                break;
+                case "Personal Info":
+                personalPage.confirmPersonalInfoPage();
                 break;
         }
 
@@ -129,7 +132,7 @@ public class NesineStep extends BaseStep{
     @And("The User Stores UserId In Main Page")
     public void theUserStoresUserIdInMainPage() {
 
-        String userId = mainPage.getUserIdFromScreen();
+        userId = mainPage.getUserIdFromScreen();
 
     }
 
