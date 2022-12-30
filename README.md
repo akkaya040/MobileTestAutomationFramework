@@ -6,7 +6,9 @@ The tests were created for mobile automation testing, on every test run some che
 
 
 # Project Solution
+
 ![img.png](img.png)
+
 Features folder contains our tests. Encoded with the Gherkin syntax. Background steps work before the test and ensure that the test becomes executable.
 
 Utils directory allows the driver to be created and passed other classes.
@@ -61,7 +63,6 @@ This project was developed using Java V1.8 with TestNg, Maven, Cucumber and Appi
 
 # Framework Installation & Prerequisites
 
-Foobar is a Python library for dealing with word pluralization.
 
 ## Prerequities
 ```bash
