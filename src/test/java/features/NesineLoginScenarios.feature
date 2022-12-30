@@ -12,6 +12,8 @@ Feature: Nesine Login Scenarios
   @ValidLogin @Positive
   Scenario: Successful User Login
     Given The User Starts Nesine App
+#    And The User Fills Username From Env
+#    And The User Fills Password From Env
     And The User Fills Username As "akkaya040"
     And The User Fills Password As "123456Aa"
     When The User Clicks Login Button In Login Page

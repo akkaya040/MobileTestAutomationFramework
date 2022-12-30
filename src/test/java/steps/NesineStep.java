@@ -7,8 +7,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utils.DriverManager;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 public class NesineStep extends BaseStep{
 
+    InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("my.properties");
+    Properties prop = new Properties();
     public String userId;
     @Before
     public void setupPages() {
@@ -70,6 +76,33 @@ public class NesineStep extends BaseStep{
     public void theUserFillsPasswordAs(String password) {
 
         loginPage.fillPasswordAs(password);
+
+    }
+
+
+     // app.username can be called
+     // app.password can be called
+    public String getParameterFromEnv(String param){
+
+        try {
+            prop.load(is);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return prop.getProperty(param);
+    }
+
+    @And("The User Fills Username From Env")
+    public void theUserFillsUsernameFromEnv() {
+
+        loginPage.fillUsernameAs(getParameterFromEnv("app.username"));
+
+    }
+
+    @And("The User Fills Password From Env")
+    public void theUserFillsPasswordFromEnv() {
+
+        loginPage.fillPasswordAs(getParameterFromEnv("app.password"));
 
     }
 

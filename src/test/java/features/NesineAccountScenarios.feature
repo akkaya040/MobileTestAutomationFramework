@@ -7,6 +7,8 @@ Feature: Nesine Account Scenarios
     And The User Skips Learning Screen
     When The User Clicks "Login" Button In Main Page
     Then The User Should Arrive "Login" Page
+#    And The User Fills Username From Env
+#    And The User Fills Password From Env
     And The User Fills Username As "akkaya040"
     And The User Fills Password As "123456Aa"
     When The User Clicks Login Button In Login Page
