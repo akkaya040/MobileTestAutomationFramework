@@ -8,6 +8,7 @@ Feature: Nesine Login Scenarios
     When The User Clicks "Login" Button In Main Page
     Then The User Should Arrive "Login" Page
 
+  @severity=normal
   @ValidLogin @Positive
   Scenario: Successful User Login
     Given The User Starts Nesine App
@@ -21,6 +22,7 @@ Feature: Nesine Login Scenarios
     When The User Confirms Logout Message Popup
     Then The User Should Arrive "Main" Page
 
+  @severity=normal
   @InvalidLogin @Negative
   Scenario: Unsuccessful User Login
     And The User Fills Username As "TestTest"

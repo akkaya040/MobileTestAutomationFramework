@@ -5,7 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import utils.ThreadLocalDriver;
+import utils.DriverManager;
 
 public class NesineStep extends BaseStep{
 
@@ -13,7 +13,7 @@ public class NesineStep extends BaseStep{
     @Before
     public void setupPages() {
 
-        initPages(ThreadLocalDriver.getDriver());
+        initPages(DriverManager.getDriver());
 
     }
 

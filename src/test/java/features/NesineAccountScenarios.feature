@@ -12,6 +12,7 @@ Feature: Nesine Account Scenarios
     When The User Clicks Login Button In Login Page
     Then The User Should See UserId In Main Page
 
+  @severity=critical
   @AddingRandomPromotionCode @Negative
   Scenario: Adding Random Promotion Code
     When The User Clicks "Account" Button In Main Page
@@ -25,6 +26,7 @@ Feature: Nesine Account Scenarios
     And The User Clicks Close Button In Promotions Page
     Then The User Should Arrive "Account" Page
 
+  @severity=normal
   @ControlAccountInformations
   Scenario: Control Account Information
     And The User Stores UserId In Main Page

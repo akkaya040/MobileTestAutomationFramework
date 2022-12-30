@@ -16,8 +16,8 @@ import tests.BaseTest;
         glue = "steps",
         publish = false,
         dryRun = false,
-        //    tags = "@NesineAutomation",
-        tags= "@ControlAccountInformations"
+        tags = "@NesineAutomation"
+        //tags= "@AddingRandomPromotionCode"
 )
 public class TestRunner extends BaseTest {
     private TestNGCucumberRunner cucumberRunner;
@@ -29,7 +29,7 @@ public class TestRunner extends BaseTest {
 
     }
 
-    @Test(groups = "cucumber", description = "Step", dataProvider = "scenarios")
+    @Test(groups = "cucumber", description = "Test", dataProvider = "scenarios")
     public void scenario(PickleWrapper pickleWrapper, FeatureWrapper featureWrapper) {
 
         cucumberRunner.runScenario(pickleWrapper.getPickle());

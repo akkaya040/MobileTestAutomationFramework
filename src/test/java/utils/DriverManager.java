@@ -3,7 +3,7 @@ package utils;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
-public class ThreadLocalDriver {
+public class DriverManager {
     private static final ThreadLocal<AndroidDriver<MobileElement>> driver = new ThreadLocal<>();
 
     public static synchronized void setDriver(AndroidDriver<MobileElement> androidDriver) {
