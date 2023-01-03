@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Parallel-Run-Active" parallel="tests" thread-count="1">
+<suite name="Parallel-Run-Active" parallel="tests" thread-count="2">
     <listeners>
         <listener class-name = "utils.CustomLogger" />
     </listeners>
@@ -19,19 +19,19 @@
         </classes>
     </test>
 
-<!--    <test name="Device: Emulator-5556">-->
-<!--        <parameter name="deviceName" value="Android SDK built for x86"/>-->
-<!--        <parameter name="udid" value="emulator-5554"/>-->
-<!--        <parameter name="platformName" value="Android"/>-->
-<!--        <parameter name="platformVersion" value="10"/>-->
-<!--        <parameter name="appPackage" value="com.pordiva.nesine.android"/>-->
-<!--        <parameter name="appActivity" value="com.nesine.ui.taboutside.splash.SplashActivity"/>-->
-<!--        <parameter name="automationName" value="UiAutomator2"/>-->
+    <test name="Device: Emulator-5556">
+        <parameter name="deviceName" value="Android SDK built for x86"/>
+        <parameter name="udid" value="emulator-5554"/>
+        <parameter name="platformName" value="Android"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="appPackage" value="com.pordiva.nesine.android"/>
+        <parameter name="appActivity" value="com.nesine.ui.taboutside.splash.SplashActivity"/>
+        <parameter name="automationName" value="UiAutomator2"/>
 
-<!--        <classes>-->
-<!--            <class name="tests.TestRunner"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+        <classes>
+            <class name="tests.TestRunner"/>
+        </classes>
+    </test>
 
     <!--    <test name="EmulatorDevice-5556">-->
     <!--        <parameter name="deviceName" value="Android SDK built for x86"/>-->
